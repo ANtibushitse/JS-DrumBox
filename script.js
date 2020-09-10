@@ -1,15 +1,14 @@
 function playSound(e) {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-  if (!audio) return;// empeche la fonction de tourner en  boucle 
+  if (!audio) return;// empêche la fonction de tourner en boucle 
 
-  key.classList.add('playing');//   permets däjouter pla fonction play   à key .remove  et à toggle
+  key.classList.add('playing');//Permets d'ajouter fonction play à key .remove et à toggle
   audio.currentTime = 0;
   audio.play();
 }
 console.log("transition");
 function removeTransition(e) {
-  // 
   if (e.propertyName !== 'transform') return;
   e.target.classList.remove('playing');
 
