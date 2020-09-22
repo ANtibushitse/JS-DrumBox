@@ -9,14 +9,15 @@ function playSound(e) {
 }
 
 function removeTransition(e) {
-  if (e.propertyName !== 'transorm') return;
-  console.log(this);
+  console.log(e.propertyName);
 
-  //e.target.classList.remove('playing');
+  if (e.propertyName !== 'transform') return;
+  console.log(this);
+  e.target.classList.remove('playing');
 };
 //Hello there :P 
 const keys = Array.from(document.querySelectorAll('.key'));
 // consol.log(keys) returen arrau
 // keys.forEach(key => console.log('hgjg'));//  is this feasable? 
-keys.forEach(key => key.addEventListener('transitioncancel', removeTransition));  
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));  
 window.addEventListener('keydown', playSound);

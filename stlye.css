@@ -1,6 +1,6 @@
 html {
     font-size: 17px;
-    background :url(/Users/arsene/Documents/Coding/repo/source/DrumBox/img/808.jpg);
+    background :url(./img/808.jpg);
     background-size: cover;
 }  
   body,html {
